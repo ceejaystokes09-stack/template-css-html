@@ -8,23 +8,45 @@
     <title>Template</title>
 </head>
 <body>
-    <div class="top-nav centerX space-around">
+    <div class="top-nav centerX space-evenly">
         <div>
             Title
         </div>
+        <div>
+            <a href="#">link1</a>
+            <a href="#">link1</a>
+            <a href="#">link1</a>
+            <a href="#">link1</a>
+            <a href="#">link1</a>
+        </div>
         <div width="80%">
-            <div>
+            <div class="search-control">
                 <main class="search center">
                     <input type="search" id="search-input" placeholder="Search placeholder :">
                 </main>
                 <i class="fa-solid fa-magnifying-glass" id="search-load"></i>
             </div>
-            <i class="fa-solid fa-bell"></i>
-            <i class="fa-solid fa-ellipsis-vertical"></i>
+            <i class="fa-solid fa-bell cut"  ></i>
+            <i class="fa-solid fa-ellipsis-vertical cut"></i>
+            <i class="fa-solid fa-bars burger"></i>
         </div>
-        
+    
+        <div class="double-header-mega border-gradient-round centerX sspace-around">
+            <div>
+                <a href="#">link1</a>
+                <a href="#">link1</a>
+                <a href="#">link1</a>
+                <a href="#">link1</a>
+                <a href="#">link1</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-bell cut"  ></i>
+                <i class="fa-solid fa-ellipsis-vertical cut"></i>
+            </div>
+        </div>
 
     </div>
+    
     <nav class="side-nav rounded-right-only">
         <main class="space-evenly col">
             <div class="centerY">
@@ -77,7 +99,7 @@
     const search = document.querySelector(".search")
     const search_button = document.getElementById("search-load")
 
-    search_button.addEventListener("mouseenter", () => {
+    search_button.addEventListener("click", () => {
         search.classList.toggle("is-open")
     })
 </script>
