@@ -31,7 +31,7 @@
             <i class="fa-solid fa-bars burger"></i>
         </div>
     
-        <div class="double-header-mega border-gradient-round centerX sspace-around">
+        <div class="double-header-mega border-gradient-round centerX space-around">
             <div>
                 <a href="#">link1</a>
                 <a href="#">link1</a>
@@ -102,5 +102,15 @@
     search_button.addEventListener("click", () => {
         search.classList.toggle("is-open")
     })
+
+    //  mega link config
+
+    const open = document.querySelector(".top-nav .burger")
+    const nav = document.querySelector(".top-nav .double-header-mega")
+    open.addEventListener("click", ()=>{
+        nav.classList.toggle("is-visible")
+    })
+
+
 </script>
 </html>
