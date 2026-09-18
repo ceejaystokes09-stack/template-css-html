@@ -118,6 +118,15 @@
         close.ariaDisabled = isVisible ? "false" : "true"
     })
 
+    const mobileScreen = window.matchMedia("(max-width: 500px)")
+    mobileScreen.addEventListener("change", (event) => {
+        if (!event.matches) {
+            nav.classList.remove("is-visible")
+            open.ariaDisabled = "false"
+            close.ariaDisabled = "true"
+        }
+    })
+
 
 </script>
 </html>
