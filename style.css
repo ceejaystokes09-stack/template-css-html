@@ -145,7 +145,7 @@ body{
 }
 
 .side-nav.is-visible{
-    transform: translateX(99%);
+    transform: translateX(0px);
 }
 
 @media (max-width: 500px){
@@ -158,10 +158,12 @@ body{
 }
 
 .side-nav button{
-    background: linear-gradient(white, rgb(188, 227, 240), #97c8f0 ),
-    linear-gradient(35deg orange, yellow, rgb(141, 238, 14));
+    background: linear-gradient(#123b43, #1d6870),
+    linear-gradient(35deg, #ff6b4a, #ffc857, #f08a5d);
     z-index: 999;
     position: absolute;
+    border: 2px solid transparent;
+    padding: 2px;
     bottom: 20px;
     left: 101%;
     width: 75px;
@@ -174,7 +176,7 @@ body{
 
 .side-nav button i{
     display: none;
-    color:rgb(97, 94, 94);
+    color:rgb(230, 230, 230);
 
 }
 

@@ -14,7 +14,7 @@
                 <p>Data</p>
             </div>
         </main>
-        <button class="border-gradient-round rounded-right-only">
+        <button class="border-gradient-round rounded-right-only center">
             <i class="fa-solid fa-bars" aria-disabled="false"></i>
             <i class="fa-solid fa-x" aria-disabled="true"></i>
         </button>
@@ -36,9 +36,22 @@
     </div>
 </body>
 <script>
+    /*toggle code */
     const toggle = document.getElementById("toggle")
     toggle.addEventListener("change", (e)=>{
         if (e.target && e.target.checked)console.log("toggle checked / turned on")
+    })
+
+    // side nav code 
+    const side_nav = document.querySelector(".side-nav")
+    const side_button = document.querySelector(".side-nav button")
+    const bars_icon = document.querySelector(".side-nav button .fa-bars")
+    const close_icon = document.querySelector(".side-nav button .fa-x")
+
+    side_button.addEventListener("click", () => {
+        const isVisible = side_nav.classList.toggle("is-visible")
+        bars_icon.ariaDisabled = isVisible ? "true" : "false"
+        close_icon.ariaDisabled = isVisible ? "false" : "true"
     })
 </script>
 </html>
