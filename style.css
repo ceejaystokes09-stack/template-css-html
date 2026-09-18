@@ -72,6 +72,10 @@
     border-bottom-right-radius: 12px;
 }
 
+i{
+    cursor: pointer;
+}
+
 
 /*
 ==============================================================================
@@ -122,15 +126,15 @@ Side - nav
 */
 
 body{
-    margin: 5px 100px;
+    margin: 0px 35px;
 }
 
 .side-nav{
     text-align: center;
     position: fixed;
     left: 0;
-    top: auto;
-    height: 100vh;
+    top: 83px;
+    height: calc(100vh - 83px);
     width: 125px;
     background-color: #3f3e3e ;
     border: 2px solid #222;
@@ -144,19 +148,21 @@ body{
     transform: translateX(-85%);
 }
 
-.side-nav:hover{
+.side-nav.is-visible{
     transform: translateX(0px);
 }
 
-.side-nav.is-visible{
-    transform: translateX(0px);
+@media (min-width: 501px){
+    .side-nav:hover{
+        transform: translateX(0px);
+    }
 }
 
 .side-nav button{
     display: none;
     background: linear-gradient(#123b43, #1d6870),
     linear-gradient(35deg, #ff6b4a, #ffc857, #f08a5d);
-    z-index: 999;
+    z-index: 99;
     position: absolute;
     border: 2px solid transparent;
     padding: 2px;
@@ -193,14 +199,61 @@ body{
     .side-nav{
         transform: translateX(-100%); /*width of the side-nave making it not visible*/
     }
+    .side-nav.is-visible{
+        transform: translateX(0px);
+    }
     .side-nav button{
-        display: block !important;
+        display: flex;
     }
 
 }
 
+/*
+=========================================
+Top nav
+=========================================
+*/
 
+.top-nav{
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 999;
+    width:100vw;
+    height:83px;
+    box-shadow: 3px 0px 18px -1px rgba(61,8,8,0.81);
+    -webkit-box-shadow: 3px 0px 18px -1px rgba(61,8,8,0.81);
+    -moz-box-shadow: 3px 0px 18px -1px rgba(61,8,8,0.81);
+    background: rgb(252, 252, 252);
+    color: balck;
+    font-size: x-large;
 
+}
+
+.top-nav div{
+    display: flex;
+    justify-content: space-evenly;
+    gap:10px;
+}
+
+/*
+=========================================
+Search Website
+=========================================
+*/
+
+.search{
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+}
+
+.search.is-open{
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
 /*
 ========================================
 DONT COPY INTO WORKSHEET 
@@ -210,5 +263,5 @@ DONT COPY INTO WORKSHEET
 .test{
     background: linear-gradient(white,white), linear-gradient(75deg, red,orange);
     border: solid 2px transparent;
-    
+    padding: 10px;
 }

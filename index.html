@@ -8,6 +8,24 @@
     <title>Template</title>
 </head>
 <body>
+    <div class="top-nav centerX space-between">
+        <div>
+            Title
+        </div>
+        
+        <div>
+            <div>
+                <main class="search">
+                    <input type="text" id="search-input" placeholder="Search placeholder :">
+                </main>
+                <i class="fa-solid fa-magnifying-glass" id="search-load"></i>
+            </div>
+            <i class="fa-solid fa-bell"></i>
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+        </div>
+        
+
+    </div>
     <nav class="side-nav rounded-right-only">
         <main class="space-evenly col">
             <div class="centerY">
@@ -21,19 +39,22 @@
         
         
     </nav>
-    <div>
-        <h2>Slider example</h2>
-        <input type="checkbox" id="toggle" class="toggle-checkbox">
-        <label for="toggle" class="toggle-label">
-            <span class="toggle-inner-button"></span>
-        </label>
-    </div>
-
-    <div class="centerX">
-        <div class="test border-gradient-round">
-            I have a rounded colored border
+    <main style="margin-top: 90px">
+        <div>
+            <h2>Slider example</h2>
+            <input type="checkbox" id="toggle" class="toggle-checkbox">
+            <label for="toggle" class="toggle-label">
+                <span class="toggle-inner-button"></span>
+            </label>
         </div>
-    </div>
+
+        <div class="centerX">
+            <div class="test border-gradient-round">
+                I have a rounded colored border
+            </div>
+        </div>
+    </main>
+    
 </body>
 <script>
     /*toggle code */
@@ -52,6 +73,13 @@
         const isVisible = side_nav.classList.toggle("is-visible")
         bars_icon.ariaDisabled = isVisible ? "true" : "false"
         close_icon.ariaDisabled = isVisible ? "false" : "true"
+    })
+
+    const search = document.querySelector(".search")
+    const search_button = document.getElementById("search-load")
+
+    search_button.addEventListener("mouseenter", () => {
+        search.classList.toggle("is-open")
     })
 </script>
 </html>
