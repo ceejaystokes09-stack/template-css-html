@@ -234,6 +234,7 @@ Top nav
     display: flex;
     justify-content: space-evenly;
     gap:10px;
+    
 }
 
 /*
@@ -242,18 +243,42 @@ Search Website
 =========================================
 */
 
+input{
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+
+}
+
 .search{
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
     display: none;
     opacity: 0;
     visibility: hidden;
     transition: all 0.2s ease;
+    border: solid 1px rgb(187, 183, 183);
+    border-radius: 1em;
+    padding: 3px 5px;
+    width: 350px;
+    background-clip: content-box;
 }
 
 .search.is-open{
-    display: block;
+    display: flex;
     opacity: 1;
     visibility: visible;
 }
+
+.search:has(#search-input:focus){
+    outline: rgba(16, 236, 181,0.86) 2px solid;
+    outline-offset: 5px;
+
+}
+
 /*
 ========================================
 DONT COPY INTO WORKSHEET 
