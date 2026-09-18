@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Template</title>
+</head>
+<body>
+    <div>
+        <h2>Slider example</h2>
+        <input type="checkbox" id="toggle" class="toggle-checkbox">
+        <label for="toggle" class="toggle-label">
+            <span class="toggle-inner-button"></span>
+        </label>
+    </div>
+
+    <div class="centerX">
+        <div class="test border-gradient-round">
+            I have a rounded colored border
+        </div>
+    </div>
+</body>
+<script>
+    const toggle = document.getElementById("toggle")
+    toggle.addEventListener("change", (e)=>{
+        if (e.target && e.target.checked)console.log("toggle checked / turned on")
+    })
+</script>
+</html>

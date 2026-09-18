@@ -1,0 +1,118 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.centerX-col,
+.centerX{
+    display: flex;
+    align-items: center;
+
+}
+.centerY-col
+.centerY{
+    display: flex;
+    justify-content: center;
+}
+.centerY-col,
+.centerX-col{
+    flex-direction: column;
+}
+
+.space-around{
+    display: flex;
+    justify-content: space-around;
+}
+.space-evenly{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.space-between{
+    display:flex;
+    justify-content: space-between;
+}
+
+.text-outline{
+    -webkit-text-stroke: 2px black;
+}
+
+.gradient-text{
+    background-clip: text;
+    -webkit-background-clip: text; 
+
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.border-gradient-round{
+    /*add a background image of 2 values usually 2 graidents */
+    border-radius: 1em;
+    background-clip: padding-box, border-box !important;
+    background-origin: padding-box, border-box !important;
+}
+
+
+/*
+==============================================================================
+Toggle input 
+==============================================================================
+*/
+.toggle-checkbox {
+  display: none;
+}
+
+.toggle-label {
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  background-color: #ccc;
+  border-radius: 34px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-inner-button {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-checkbox:checked + .toggle-label {
+  background-color: #4cd964; 
+}
+
+
+.toggle-checkbox:checked + .toggle-label .toggle-inner-button {
+  transform: translateX(26px);
+}
+
+
+
+
+/*
+========================================
+DONT COPY INTO WORKSHEET 
+=========================================
+*/
+
+.test{
+    background: linear-gradient(white,white), linear-gradient(75deg, red,orange);
+    border: solid 2px transparent;
+    
+}
