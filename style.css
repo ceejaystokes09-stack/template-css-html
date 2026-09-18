@@ -266,6 +266,21 @@ Top nav
     
 }
 
+.top-nav i[aria-disabled="true"]{
+    display:none;
+}
+
+.top-nav .mega-close{
+    display: none;
+}
+
+.toggle-header{
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
 @media (max-width: 500px){
     .top-nav a{
         display: none;
@@ -281,9 +296,26 @@ Top nav
         visibility: visible;
     }
 
+    .top-nav .burger[aria-disabled="true"],
+    .top-nav .mega-close[aria-disabled="true"]{
+        display: none;
+    }
+
+    .top-nav .mega-close[aria-disabled="false"]{
+        display: flex;
+        opacity: 1;
+        visibility: visible;
+    }
+
     .top-nav .search{
         width: 200px;
         top:100%;
+    }
+
+    .toggle-header{
+        display: flex;
+        opacity: 1;
+        visibility: visible;
     }
 }
 

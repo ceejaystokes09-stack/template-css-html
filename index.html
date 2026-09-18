@@ -28,7 +28,11 @@
             </div>
             <i class="fa-solid fa-bell cut"  ></i>
             <i class="fa-solid fa-ellipsis-vertical cut"></i>
-            <i class="fa-solid fa-bars burger"></i>
+            <div class="toggle-header">
+            <i class="fa-solid fa-bars burger" aria-disabled="false"></i>
+            <i class="fa-solid fa-x mega-close" aria-disabled="true"></i>
+            </div>
+            
         </div>
     
         <div class="double-header-mega border-gradient-round centerX space-around">
@@ -104,11 +108,14 @@
     })
 
     //  mega link config
-
+    const b = document.querySelector(".toggle-header")
     const open = document.querySelector(".top-nav .burger")
+    const close = document.querySelector(".top-nav .mega-close")
     const nav = document.querySelector(".top-nav .double-header-mega")
-    open.addEventListener("click", ()=>{
-        nav.classList.toggle("is-visible")
+    b.addEventListener("click", () => {
+        const isVisible = nav.classList.toggle("is-visible")
+        open.ariaDisabled = isVisible ? "true" : "false"
+        close.ariaDisabled = isVisible ? "false" : "true"
     })
 
 
